@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules
+    xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+    <!-- The default theme, used for standard Plone web pages -->
+    <theme href="index.html" css:if-content="#visual-portal-wrapper" />
+
+    <drop theme="/html/head/meta" />
+    <drop theme="/html/head/title" />
+    <drop theme="/html/head/link" />
+
+    <after content="/html/head/title" theme-children="/html/head" />
+    <after content="/html/head/base | /html/head/style | /html/head/script | /html/head/link | /html/head/comment()"
+        theme-children="/html/head" />
+
+    <copy attributes="class id dir" content="/html/body" theme="/html/body" />
+    <replace css:content="#portal-logo" css:theme-children="#logo" />
+    <replace css:content="#portal-globalnav" css:theme-children="#menu" />
+    <merge css:content="#portal-globalnav ul li.selected" css:theme="#menu ul li.active" attributes="class" />
+
+
+    <drop css:theme=".post" />
+    <drop css:theme=".box1 p" />
+    <after css:content="#viewlet-above-content-title" css:theme-children=".box1" />
+    <after css:content=".documentFirstHeading" css:theme-children=".box1" />
+    <after css:content="#viewlet-below-content-title" css:theme-children=".box1" />
+    <after css:content=".documentDescription" css:theme-children=".box1" />
+    <after css:content="#viewlet-above-content-body" css:theme-children=".box1" />
+
+    <after css:content="#content-core" css:theme=".box1" />
+
+</rules>

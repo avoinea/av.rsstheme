@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<object name="portal_skins">
+ <object name="av_rsstheme_custom_images"
+    meta_type="Filesystem Directory View"
+    directory="av.rsstheme:skins/av_rsstheme_custom_images"/>
+ <object name="av_rsstheme_custom_templates"
+    meta_type="Filesystem Directory View"
+    directory="av.rsstheme:skins/av_rsstheme_custom_templates"/>
+ <object name="av_rsstheme_styles"
+    meta_type="Filesystem Directory View"
+    directory="av.rsstheme:skins/av_rsstheme_styles"/>
+
+ <skin-path name="*">
+  <layer name="av_rsstheme_custom_images"
+     insert-after="custom"/>
+  <layer name="av_rsstheme_custom_templates"
+     insert-after="av_rsstheme_custom_images"/>
+  <layer name="av_rsstheme_styles"
+     insert-after="av_rsstheme_custom_templates"/>
+ </skin-path>
+
+</object>

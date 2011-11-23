@@ -1,0 +1,5 @@
+/* Stylesheet for the 'AV RSS Theme' Plone theme */
+
+#menu li.selected a {
+  background: url(/++theme++av.rsstheme/images/img02.gif) repeat-x left bottom;
+}
