@@ -1,8 +1,9 @@
 <?xml version="1.0"?>
 <object name="portal_css">
- <stylesheet id="++resource++av.rsstheme.stylesheets/main.css" />
+ <stylesheet id="public.css"
+   expression="not:request/HTTP_X_THEME_ENABLED" />
  <stylesheet id="++theme++av.rsstheme/default.css"
   expression="request/HTTP_X_THEME_ENABLED | nothing"
   applyPrefix="True" />
- <stylesheet id="public.css" enabled="False" />
+ <stylesheet id="++resource++av.rsstheme.stylesheets/main.css" />
 </object>

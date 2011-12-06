@@ -18,6 +18,7 @@
     <copy attributes="class id dir" content="/html/body" theme="/html/body" />
     <replace css:content="#portal-logo" css:theme-children="#logo" />
     <replace css:content="#portal-globalnav" css:theme-children="#menu" />
+    <replace css:content="#portal-column-two" css:theme-children="#sidebar" />
     <merge css:content="#portal-globalnav ul li.selected" css:theme="#menu ul li.active" attributes="class" />
 
 
@@ -30,5 +31,7 @@
     <after css:content="#viewlet-above-content-body" css:theme-children=".box1" />
 
     <after css:content="#content-core" css:theme=".box1" />
+
+    <drop css:theme-children="#footer" />
 
 </rules>
