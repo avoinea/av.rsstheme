@@ -12,12 +12,6 @@ a:visited {
   background: url(/++theme++av.rsstheme/images/img02.gif) repeat-x left bottom;
 }
 
-#portal-column-two {
-  left: 0;
-  width: 195px;
-  margin-left: 0;
-}
-
 #portal-column-two dt {
   margin-bottom: 10px;
   background: url(/++theme++av.rsstheme/images/img03.gif) repeat-x left bottom;
@@ -33,6 +27,11 @@ a:visited {
   text-align: right;
 }
 
+#content {
+  width: auto;
+  float: none;
+}
+
 #content-core {
   padding: 0.5em;
 }
@@ -44,3 +43,35 @@ a:visited {
 #footer {
   min-height: 1px;
 }
+
+/* Faceted navigation */
+
+#center-and-left-area {
+  margin-right: -15em;
+}
+
+#right-area {
+  width: 15em;
+}
+
+#center-area {
+  margin-left: -15em;
+}
+
+#left-area {
+  width: 15em;
+}
+
+.right-area-js {
+  margin-right: 15em;
+}
+
+.left-area-js {
+  margin-left: 15em;
+}
+
+.faceted-widget ul {
+  padding-left: 0px;
+}
+
+/* End faceted navigation */

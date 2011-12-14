@@ -18,20 +18,9 @@
     <copy attributes="class id dir" content="/html/body" theme="/html/body" />
     <replace css:content="#portal-logo" css:theme-children="#logo" />
     <replace css:content="#portal-globalnav" css:theme-children="#menu" />
-    <replace css:content="#portal-column-two" css:theme-children="#sidebar" />
-    <merge css:content="#portal-globalnav ul li.selected" css:theme="#menu ul li.active" attributes="class" />
-
-
-    <drop css:theme=".post" />
-    <drop css:theme=".box1 p" />
-    <after css:content="#viewlet-above-content-title" css:theme-children=".box1" />
-    <after css:content=".documentFirstHeading" css:theme-children=".box1" />
-    <after css:content="#viewlet-below-content-title" css:theme-children=".box1" />
-    <after css:content=".documentDescription" css:theme-children=".box1" />
-    <after css:content="#viewlet-above-content-body" css:theme-children=".box1" />
-
-    <after css:content="#content-core" css:theme=".box1" />
-
+    <after css:content="#portal-column-one" css:theme="#sidebar" />
+    <replace css:content="#portal-column-content" css:theme="#content" />
+    <replace css:content="#portal-column-two" css:theme="#sidebar" />
     <drop css:theme-children="#footer" />
 
 </rules>

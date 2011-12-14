@@ -5,5 +5,7 @@
  <stylesheet id="++theme++av.rsstheme/default.css"
   expression="request/HTTP_X_THEME_ENABLED | nothing"
   applyPrefix="True" />
- <stylesheet id="++resource++av.rsstheme.stylesheets/main.css" />
+ <stylesheet
+  id="++resource++av.rsstheme.stylesheets/main.css"
+  expression="request/HTTP_X_THEME_ENABLED | nothing" />
 </object>
