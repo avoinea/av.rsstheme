@@ -1,11 +1,20 @@
 /* Stylesheet for the 'AV RSS Theme' Plone theme */
 
+#header {
+  margin-bottom: 1em;
+}
+
 body {
   margin-top: 30px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 legend {
   display: inline;
+}
+
+a {
+  text-decoration: none;
 }
 
 a:visited {
@@ -79,3 +88,139 @@ a:visited {
 }
 
 /* End faceted navigation */
+
+/* Faceted results */
+.rss-results {
+  clear: both;
+}
+
+.rss-results-box {
+  width: 300px;
+  height: 149px;
+  float: left;
+  overflow: hidden;
+  margin-bottom: 2em;
+}
+
+.rss-title {
+  font-size: 16px;
+  font-weight: bold;
+  height: 60px;
+  overflow: hidden;
+}
+
+.rss-description {
+  font-size: 12px;
+}
+
+.rss-results-box img {
+  float: left;
+  padding-right: 1em;
+  padding-top: 0.5em;
+}
+
+
+.rss-results-box-left {
+  clear: left;
+  padding-right: 1em;
+}
+
+.rss-results-box-right {
+}
+
+/* Batch */
+div.listingBar {
+  clear: left;
+  font-size: 80%;
+  margin: 1em 0;
+}
+
+div.listingBar .next {
+  display: inline-block;
+  float: right;
+}
+
+div.listingBar .previous {
+  display: inline-block;
+}
+
+div.listingBar a {
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  border: 0.1em solid #ccc;
+}
+
+div.listingBar a:hover {
+  color: White;
+  background-color: #329fd7;
+  border-color: #329fd7;
+}
+
+.faceted-criteria-reset {
+ float: left;
+}
+
+.faceted-text-widget input[type="text"] {
+  clear: both;
+  border: 1px solid #BCCDF0;
+  background: white url(/++resource++av.rsstheme.images/topfade.gif) repeat-x scroll center top;
+  font-size: 20px;
+  width: 85%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.faceted-text-widget input[type="submit"] {
+  font-size: 20px;
+  width: 14%;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#eee));
+  background-image: -webkit-linear-gradient(center top , #fff, #eee);
+  background-image: -moz-linear-gradient(center top , #fff, #eee);
+  background-image: -ms-linear-gradient(center top , #fff, #eee);
+  background-image: -o-linear-gradient(center top , #fff, #eee);
+}
+
+.faceted-textwidget-place-all {
+  display: inline;
+  float: right;
+}
+
+.faceted-textwidget-place-current {
+  display: inline;
+  float: right;
+}
+
+.faceted-widget {
+}
+
+#faceted-form fieldset {
+  border-color: #eee;
+  border-style: dotter;
+  border-width: 1px;
+  border-radius: 5px;
+}
+
+#faceted-form .widget-fieldset legend {
+  color: white;
+  padding: 5px 10px;
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: normal;
+  text-shadow: 1px 1px 1px #555;
+  border-radius: 5px;
+}
+
+#faceted-form .widget-fieldset legend {
+  text-align: right;
+  background-color: #777C1F;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#B1C748), to(#777C1F));
+  background-image: -webkit-linear-gradient(center top , #B1C748, #777C1F);
+  background-image: -moz-linear-gradient(center top , #B1C748, #777C1F);
+  background-image: -ms-linear-gradient(center top , #B1C748, #777C1F);
+  background-image: -o-linear-gradient(center top , #B1C748, #777C1F);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#B1C748', endColorstr='#777C1F');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#B1C748', endColorstr='#777C1F')";
+  background: linear-gradient(#B1C748, #777C1F);
+}

@@ -13,7 +13,6 @@
   <browser:resourceDirectory
     name="av.rsstheme.images"
     directory="images"
-    layer=".interfaces.IThemeSpecific"
     />
 
   <browser:resourceDirectory
@@ -23,6 +22,7 @@
 
   <faceted:view
     name="faceted-rss.view"
+    class=".app.faceted.RSSView"
     template="zpt/faceted_rss.pt"
     title="RSS View"
     permission="zope2.View"

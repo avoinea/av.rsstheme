@@ -16,14 +16,35 @@
 
         <div metal:use-macro="context/batch_macros/macros/navigation" />
 
-        <dl>
+        <div class="rss-results">
           <tal:entry repeat="brain folderContents">
-            <dt tal:content="brain/Title" />
-            <dd tal:content="brain/Description" />
+          <div tal:define="
+            odd repeat/brain/odd;
+            klass string:rss-results-box;
+            klass python:klass + ' ' + ('rss-results-box-right' if odd else 'rss-results-box-left')"
+            tal:attributes="class klass">
+            <div class="rss-title">
+              <a tal:attributes="
+                href brain/getURL;
+                title brain/Title;"
+                tal:content="brain/Title" />
+              </div>
+            <div class="rss-description">
+              <img tal:define="
+                self nocall:context/@@faceted-rss.view;
+                thumb python:self.thumb(brain)"
+                tal:attributes="
+                alt brain/Title;
+                title brain/Title;
+                src thumb;"
+                tal:condition="thumb" />
+              <span tal:content="brain/Description" />
+            </div>
+          </div>
           </tal:entry>
-        </dl>
+        </div>
 
-        <div metal:use-macro="context/batch_macros/macros/navigation" />
+        <div metal:use-macro="context/batch_macros/macros/navigation"/>
       </div>
 
     </metal:block>
