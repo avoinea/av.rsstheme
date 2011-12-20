@@ -9,6 +9,7 @@
 body {
   margin-top: 30px;
   font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff url(/++resource++av.rsstheme.images/top.png) repeat-x;
 }
 
 legend {
@@ -19,11 +20,25 @@ a {
   text-decoration: none;
 }
 
+.documentByLine {
+  font-size: 85%;
+  display: block;
+  color: #999;
+}
+
+.documentByLine a {
+  color: #999;
+}
+
+.documentByLine a:hover {
+  color: #777C1F;
+}
+
 a:visited {
   color: #7BAA0F;
 }
 
-.documentFirstHeading {
+body.template-facetednavigation_view .documentFirstHeading {
   color: white;
   padding: 5px 10px;
   line-height: 1.6;
@@ -80,6 +95,7 @@ a:visited {
 
 #footer {
   min-height: 1px;
+  background: #777C1F url(++resource++av.rsstheme.images/bottom.png) repeat-x;
 }
 
 /* Faceted navigation */
@@ -121,17 +137,13 @@ a:visited {
 
 .rss-results-box {
   width: 300px;
-  height: 149px;
   float: left;
-  overflow: hidden;
   margin-bottom: 2em;
 }
 
 .rss-title {
   font-size: 16px;
   font-weight: bold;
-  height: 60px;
-  overflow: hidden;
 }
 
 .rss-description {
@@ -182,7 +194,8 @@ div.listingBar a:hover {
 }
 
 .faceted-criteria-reset {
- float: left;
+ float: right;
+ padding-top: 1em;
 }
 
 .faceted-text-widget input[type="text"] {

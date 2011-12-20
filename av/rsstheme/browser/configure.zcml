@@ -20,6 +20,11 @@
     directory="stylesheets"
     />
 
+  <browser:resourceDirectory
+    name="av.rsstheme.js"
+    directory="js"
+    />
+
   <faceted:view
     name="faceted-rss.view"
     class=".app.faceted.RSSView"

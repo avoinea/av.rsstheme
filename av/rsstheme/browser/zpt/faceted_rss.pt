@@ -28,7 +28,15 @@
                 href brain/getURL;
                 title brain/Title;"
                 tal:content="brain/Title" />
-              </div>
+            </div>
+            <div class="documentByLine">
+              <a tal:attributes="
+                href brain/sourcePath;
+                title brain/sourceTitle;"
+                tal:content="brain/sourceTitle" />
+              <span tal:content="string: - " />
+              <span class="ro-date" tal:content="python:brain.EffectiveDate" />
+            </div>
             <div class="rss-description">
               <img tal:define="
                 self nocall:context/@@faceted-rss.view;
