@@ -1,7 +1,9 @@
 /* Stylesheet for the 'AV RSS Theme' Plone theme */
 
 #header {
-  margin-bottom: 1em;
+  margin-bottom: 0em;
+  background: none;
+  border-bottom: 1px solid #777C1F;
 }
 
 body {
@@ -19,6 +21,29 @@ a {
 
 a:visited {
   color: #7BAA0F;
+}
+
+.documentFirstHeading {
+  color: white;
+  padding: 5px 10px;
+  line-height: 1.6;
+  font-weight: normal;
+  text-shadow: 1px 1px 1px #555;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #777C1F;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#B1C748), to(#777C1F));
+  background-image: -webkit-linear-gradient(center top , #B1C748, #777C1F);
+  background-image: -moz-linear-gradient(center top , #B1C748, #777C1F);
+  background-image: -ms-linear-gradient(center top , #B1C748, #777C1F);
+  background-image: -o-linear-gradient(center top , #B1C748, #777C1F);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#B1C748', endColorstr='#777C1F');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#B1C748', endColorstr='#777C1F')";
+  background: linear-gradient(#B1C748, #777C1F);
+  width: 45%;
+  text-align: center;
+  overflow: hidden;
+  height: 50px;
 }
 
 #menu li.selected a {
@@ -210,9 +235,6 @@ div.listingBar a:hover {
   font-weight: normal;
   text-shadow: 1px 1px 1px #555;
   border-radius: 5px;
-}
-
-#faceted-form .widget-fieldset legend {
   text-align: right;
   background-color: #777C1F;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#B1C748), to(#777C1F));
@@ -223,4 +245,8 @@ div.listingBar a:hover {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#B1C748', endColorstr='#777C1F');
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#B1C748', endColorstr='#777C1F')";
   background: linear-gradient(#B1C748, #777C1F);
+}
+
+.faceted-widget-loading {
+  background-position: 10% 2em;
 }
