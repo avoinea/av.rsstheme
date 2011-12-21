@@ -1,0 +1,51 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+  xmlns:tal="http://xml.zope.org/namespaces/tal"
+  xmlns:metal="http://xml.zope.org/namespaces/metal"
+  xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+  lang="en"
+  metal:use-macro="context/main_template/macros/master"
+  i18n:domain="plone">
+<body>
+
+<metal:title fill-slot="content-title" />
+<metal:description fill-slot="content-description" />
+
+<metal:content-core fill-slot="content-core">
+  <metal:block define-macro="content-core"
+    tal:define="kssClassesView context/@@kss_field_decorator_view;
+      getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
+      templateId template/getId;
+      text python:context.CookedBody(stx_level=2);
+      len_text python:len(text.strip())">
+
+  <div class="newsImageContainer"
+    tal:condition="context/getImage|nothing">
+  <img tal:replace="structure python: context.tag(scale='preview', css_class='newsImage')" src="" alt="" />
+  </div>
+
+  <h1 metal:use-macro="context/kss_generic_macros/macros/generic_title_view">
+    Generic KSS Title. Is rendered with class="documentFirstHeading".
+  </h1>
+  <div class="documentByLine">
+    <span class="ro-date" tal:content="context/getEffectiveDate" />
+  </div>
+
+  <div metal:define-macro="text-field-view"
+    id="parent-fieldname-text" class="stx"
+    tal:define="kss_class python:getKssClasses('text', templateId=templateId, macro='text-field-view');
+      text text|context/getText|context/Description"
+    tal:condition="text"
+    tal:attributes="class python:test(context.Format() in ('text/structured',
+      'text/x-rst', ), 'stx' + kss_class, 'plain' + kss_class)">
+  <div metal:define-slot="inside" tal:replace="structure text">The body</div>
+  </div>
+
+  <div class="newsExternal">
+    <a tal:attributes="href context/getUrl; title context/title_or_id"
+     target="_blank" >Citeşte articolul complet</a>
+  </div>
+</metal:block>
+</metal:content-core>
+
+</body>
+</html>

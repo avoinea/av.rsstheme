@@ -1,0 +1,27 @@
+<div id="av-footer">
+  <dl class="av-footer-servers">
+    <dt>
+      <a tal:attributes="href context/portal_url"
+        title="Ziare online" i18n:translate="">Ziare online</a>
+    </dt>
+    <dd tal:repeat="term python:view.sources()">
+      <h2>
+        <a tal:attributes="href term/value; title term/title"
+           tal:content="term/title" />
+      </h2>
+    </dd>
+  </dl>
+  <!--<dl class="av-footer-categories">-->
+    <!--<dt>-->
+      <!--<a tal:attributes="href context/portal_url"-->
+        <!--title="Ştiri din:">Ştiri din:</a>-->
+    <!--</dt>-->
+    <!--<dd tal:repeat="term python:view.keywords()">-->
+      <!--<h2>-->
+        <!--<a tal:attributes="href term/value; title term/title"-->
+           <!--tal:content="term/title" />-->
+      <!--</h2>-->
+    <!--</dd>-->
+  <!--</dl>-->
+  <div style="clear: both" />
+</div>

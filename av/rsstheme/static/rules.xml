@@ -21,6 +21,6 @@
     <after css:content="#portal-column-one" css:theme="#sidebar" />
     <replace css:content="#portal-column-content" css:theme="#content" />
     <replace css:content="#portal-column-two" css:theme="#sidebar" />
-    <drop css:theme-children="#footer" />
+    <replace css:content="#av-footer" css:theme-children="#footer" />
 
 </rules>

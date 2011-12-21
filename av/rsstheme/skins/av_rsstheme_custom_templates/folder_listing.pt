@@ -1,0 +1,61 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="plone">
+
+<body>
+
+<metal:content-core fill-slot="content-core">
+    <metal:block define-macro="content-core">
+      <div tal:define="
+        folderContents folderContents | python:context.getFolderContents();
+        Batch python:modules['Products.CMFPlone'].Batch;
+        b_start python:request.get('b_start', 0);
+        batch python:isinstance(folderContents, Batch) and folderContents or Batch(folderContents, 20, int(b_start), orphan=2);">
+
+        <div metal:use-macro="context/batch_macros/macros/navigation" />
+
+        <div class="rss-results">
+          <tal:entry repeat="brain folderContents">
+          <div tal:define="
+            title brain/Title;
+            odd repeat/brain/odd;
+            klass string:rss-results-box;
+            klass python:klass + ' ' + ('rss-results-box-right' if odd else 'rss-results-box-left')"
+            tal:attributes="class klass"
+            tal:condition="title">
+            <div class="rss-title">
+              <a tal:attributes="
+                href brain/getURL;
+                title brain/Title;"
+                tal:content="brain/Title" />
+            </div>
+            <div class="documentByLine" tal:define="
+              effective python:brain.EffectiveDate;
+              sourcePath brain/sourcePath | python:[];">
+              <a tal:condition="sourcePath"
+                tal:attributes="
+                href python:'/'.join(sourcePath);
+                title brain/sourceTitle;"
+                tal:content="brain/sourceTitle" />
+              <span tal:content="string: - " tal:condition="sourcePath" />
+              <span class="ro-date" tal:content="effective" tal:condition="python:effective and effective not in ('None', )"/>
+            </div>
+            <div class="rss-description">
+              <span tal:content="brain/Description" />
+            </div>
+          </div>
+          </tal:entry>
+        </div>
+
+        <div metal:use-macro="context/batch_macros/macros/navigation"/>
+      </div>
+
+    </metal:block>
+  </metal:content-core>
+
+</body>
+</html>

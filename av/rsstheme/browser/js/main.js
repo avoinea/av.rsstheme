@@ -87,12 +87,14 @@ jQuery.fn.rodate = function(options){
   });
 };
 
+var doRoDate = function(){
+  var dates = jQuery('.ro-date');
+  if(!dates.length){
+    return;
+  }
+  dates.rodate();
+};
 jQuery(document).ready(function(){
-  jQuery(Faceted.Events).bind(Faceted.Events.AJAX_QUERY_SUCCESS, function(){
-    var dates = jQuery('.ro-date');
-    if(!dates.length){
-      return;
-    }
-    dates.rodate();
-  });
+  doRoDate();
+  jQuery(Faceted.Events).bind(Faceted.Events.AJAX_QUERY_SUCCESS, doRoDate);
 });

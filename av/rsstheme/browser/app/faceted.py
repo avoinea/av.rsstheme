@@ -12,7 +12,10 @@ class RSSView(BrowserView):
         """
         portal = getToolByName(self.context, 'portal_url')
         portal = portal.getPortalObject()
-        img = portal.restrictedTraverse(brain.getURL(1) + '/image_thumb', None)
+        url = brain.getURL(1)
+        if not url.startswith(portal.getId()):
+            url = '/' + portal.getId() + url
+        img = portal.restrictedTraverse(url + '/image_thumb', None)
         if not img:
             return ''
         return brain.getURL() + '/image_thumb'
