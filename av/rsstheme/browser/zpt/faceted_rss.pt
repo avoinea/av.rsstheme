@@ -31,7 +31,7 @@
             </div>
             <div class="documentByLine">
               <a tal:attributes="
-                href brain/sourcePath;
+                href python:'/'.join(brain.sourcePath);
                 title brain/sourceTitle;"
                 tal:content="brain/sourceTitle" />
               <span tal:content="string: - " />
