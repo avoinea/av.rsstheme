@@ -6,6 +6,21 @@
   border-bottom: 1px solid #777C1F;
 }
 
+#page {
+  width: auto;
+  max-width: 1500px;
+  min-width: 480px;
+  margin: auto;
+}
+
+#header {
+  width: auto;
+  max-width: 1500px;
+  min-width: 480px;
+  height: 82px;
+  margin: auto;
+}
+
 body {
   margin-top: 30px;
   font-family: Arial, Helvetica, sans-serif;
@@ -140,9 +155,30 @@ body.template-facetednavigation_view .documentFirstHeading {
 }
 
 .rss-results-box {
-  width: 48%;
+  max-width: 250px;
   float: left;
-  margin-bottom: 2em;
+  margin: 1em;
+  min-height: 200px;
+  box-shadow: 5px 5px 5px #ccc;
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 10px;
+  position: relative;
+}
+
+.rss-results-box:hover {
+  box-shadow: none;
+}
+
+.rss-results-box a.details {
+  visibility: hidden;
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+}
+
+.rss-results-box:hover a.details {
+  visibility: visible;
 }
 
 .rss-title {
@@ -162,8 +198,6 @@ body.template-facetednavigation_view .documentFirstHeading {
 
 
 .rss-results-box-left {
-  clear: left;
-  padding-right: 1em;
 }
 
 .rss-results-box-right {

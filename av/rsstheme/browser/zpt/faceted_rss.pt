@@ -48,6 +48,9 @@
                 tal:condition="thumb" />
               <span tal:content="brain/Description" />
             </div>
+            <a class="details" tal:attributes="
+              href brain/getURL;
+              title brain/Title" i18n:translate="">Citeşte articol</a>
           </div>
           </tal:entry>
         </div>
