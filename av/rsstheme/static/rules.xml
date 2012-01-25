@@ -12,6 +12,7 @@
     <drop theme="/html/head/link" />
 
     <after content="/html/head/title" theme-children="/html/head" />
+    <after content="/html/head/meta" theme-children="/html/head" />
     <after content="/html/head/base | /html/head/style | /html/head/script | /html/head/link | /html/head/comment()"
         theme-children="/html/head" />
 

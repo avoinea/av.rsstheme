@@ -155,10 +155,10 @@ body.template-facetednavigation_view .documentFirstHeading {
 }
 
 .rss-results-box {
-  max-width: 250px;
+  width: 250px;
   float: left;
   margin: 1em;
-  min-height: 200px;
+  min-height: 250px;
   box-shadow: 5px 5px 5px #ccc;
   padding: 1em;
   border: 1px solid #CCC;
