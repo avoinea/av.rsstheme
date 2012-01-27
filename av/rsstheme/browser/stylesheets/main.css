@@ -80,8 +80,23 @@ body.template-facetednavigation_view .documentFirstHeading {
   height: 50px;
 }
 
+#menu {
+  float: right;
+  max-width: 50%;
+  overflow: hidden;
+  max-height: 60px;
+}
+
+#menu ul {
+  float: right;
+}
+
 #menu li.selected a {
   background: url(/++theme++av.rsstheme/images/img02.gif) repeat-x left bottom;
+}
+
+#menu a {
+  margin-left: 15px;
 }
 
 #portal-column-two dt {
@@ -113,6 +128,7 @@ body.template-facetednavigation_view .documentFirstHeading {
 }
 
 #footer {
+  min-height: 250px;
   padding: 0px;
   background: #777C1F url(++resource++av.rsstheme.images/bottom.png) repeat-x;
 }
@@ -155,7 +171,7 @@ body.template-facetednavigation_view .documentFirstHeading {
 }
 
 .rss-results-box {
-  width: 250px;
+  max-width: 250px;
   float: left;
   margin: 1em;
   min-height: 250px;
@@ -188,6 +204,10 @@ body.template-facetednavigation_view .documentFirstHeading {
 
 .rss-description {
   font-size: 12px;
+}
+
+.rss-description p {
+  font-size: 16px;
 }
 
 .rss-results-box img {
@@ -350,7 +370,6 @@ div.listingBar a:hover {
 }
 
 .av-footer-servers {
-  width: 60%;
   float: left;
 }
 
