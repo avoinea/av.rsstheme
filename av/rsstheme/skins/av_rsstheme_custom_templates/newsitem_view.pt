@@ -5,6 +5,7 @@
   lang="en"
   metal:use-macro="context/main_template/macros/master"
   i18n:domain="plone">
+
 <body>
 
 <metal:title fill-slot="content-title" />
@@ -18,32 +19,77 @@
       text python:context.CookedBody(stx_level=2);
       len_text python:len(text.strip())">
 
+<div itemscope itemtype="http://schema.org/NewsArticle">
   <div class="newsImageContainer"
     tal:condition="context/getImage|nothing">
-  <img tal:replace="structure python: context.tag(scale='preview', css_class='newsImage')" src="" alt="" />
+    <img tal:replace="structure python: context.tag(scale='preview', css_class='newsImage', itemprop='image')" />
   </div>
 
-  <h1 metal:use-macro="context/kss_generic_macros/macros/generic_title_view">
+  <h1 itemprop="name" class="documentFirstHeading">
     Generic KSS Title. Is rendered with class="documentFirstHeading".
   </h1>
+  <div style="float: right; margin-right: -50px; padding: 1em;">
+    <div class="g-plusone"></div>
+  </div>
   <div class="documentByLine">
-    <span class="ro-date" tal:content="context/getEffectiveDate" />
+    <span itemprop="datePublished"
+      tal:attributes="content context/getEffectiveDate"
+      class="ro-date" tal:content="context/getEffectiveDate" />
   </div>
 
-  <div metal:define-macro="text-field-view"
+  <div class="description" metal:define-macro="text-field-view"
     id="parent-fieldname-text" class="stx"
     tal:define="kss_class python:getKssClasses('text', templateId=templateId, macro='text-field-view');
-      text text|context/getText|context/Description"
+      text text|context/getText|context/Description;
+      is_metropotam python:'metropotam.ro' in context.absolute_url(1);
+      text python:context.Description if is_metropotam else text"
     tal:condition="text"
     tal:attributes="class python:test(context.Format() in ('text/structured',
-      'text/x-rst', ), 'stx' + kss_class, 'plain' + kss_class)">
-  <div metal:define-slot="inside" tal:replace="structure text">The body</div>
+      'text/x-rst', ), 'rss-description stx' + kss_class, 'rss-description plain' + kss_class)"
+    itemprop="articleBody">
+    <div metal:define-slot="inside" tal:replace="structure text">The body</div>
   </div>
+
+  <!-- AddThis Button BEGIN -->
+  <div class="addthis_toolbox addthis_default_style">
+    <a class="addthis_button_preferred_1"></a>
+    <a class="addthis_button_preferred_2"></a>
+    <a class="addthis_button_preferred_3"></a>
+    <a class="addthis_button_preferred_4"></a>
+    <a class="addthis_button_compact"></a>
+    <a class="addthis_counter addthis_bubble_style"></a>
+  </div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4ddcb98923af5307"></script>
+  <!-- AddThis Button END -->
+  <!-- Google +1 -->
+  <script type="text/javascript">
+    window.___gcfg = {lang: 'ro'};
+
+    (function() {
+      var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+      po.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+  </script>
+  <!-- End Google +1 -->
 
   <div class="newsExternal">
     <a tal:attributes="href context/getUrl; title context/title_or_id"
-     target="_blank" >Citeşte articolul complet</a>
+     target="_blank" itemprop="publishingPrinciples">Citeşte articolul complet</a>
   </div>
+
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <div class="fb-comments" tal:attributes="data-href here/absolute_url" data-num-posts="5" data-width="470"></div>
+
+</div>
 </metal:block>
 </metal:content-core>
 

@@ -18,27 +18,32 @@
 
         <div class="rss-results">
           <tal:entry repeat="brain folderContents">
-          <div tal:define="
+          <div itemscope itemtype="http://schema.org/NewsArticle"
+            tal:define="
             odd repeat/brain/odd;
             klass string:rss-results-box;
             klass python:klass + ' ' + ('rss-results-box-right' if odd else 'rss-results-box-left')"
             tal:attributes="class klass">
             <div class="rss-title">
-              <a tal:attributes="
+              <a itemprop="name"
+                tal:attributes="
                 href brain/getURL;
                 title brain/Title;"
                 tal:content="brain/Title" />
             </div>
             <div class="documentByLine">
-              <a tal:attributes="
+              <a itemprop="author" tal:attributes="
                 href python:'/'.join(brain.sourcePath);
                 title brain/sourceTitle;"
                 tal:content="brain/sourceTitle" />
               <span tal:content="string: - " />
-              <span class="ro-date" tal:content="python:brain.EffectiveDate" />
+              <span itemprop="datePublished" class="ro-date"
+                tal:attributes="content python:brain.EffectiveDate"
+                tal:content="python:brain.EffectiveDate" />
             </div>
             <div class="rss-description">
-              <img tal:define="
+              <img itemprop="image"
+                tal:define="
                 self nocall:context/@@faceted-rss.view;
                 thumb python:self.thumb(brain)"
                 tal:attributes="
@@ -46,9 +51,9 @@
                 title brain/Title;
                 src thumb;"
                 tal:condition="thumb" />
-              <span tal:content="brain/Description" />
+              <span itemprop="description" tal:content="brain/Description" />
             </div>
-            <a class="details" tal:attributes="
+            <a class="details" itemprop="url" tal:attributes="
               href brain/getURL;
               title brain/Title" i18n:translate="">Citeşte articol</a>
           </div>
