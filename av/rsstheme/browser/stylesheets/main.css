@@ -174,12 +174,13 @@ body.template-facetednavigation_view .documentFirstHeading {
   max-width: 250px;
   float: left;
   margin: 1em;
-  min-height: 250px;
+  height: 250px;
   box-shadow: 5px 5px 5px #ccc;
   padding: 1em;
   border: 1px solid #CCC;
   border-radius: 10px;
   position: relative;
+  overflow: hidden;
 }
 
 .rss-results-box:hover {
@@ -191,6 +192,12 @@ body.template-facetednavigation_view .documentFirstHeading {
   position: absolute;
   bottom: 1em;
   right: 1em;
+  width: 100%;
+  text-align: right;
+  padding: 1em;
+  text-shadow: 2px 2px 2px #eee;
+  border: 1px solid #eee;
+  background-color: #fff;
 }
 
 .rss-results-box:hover a.details {
@@ -200,6 +207,7 @@ body.template-facetednavigation_view .documentFirstHeading {
 .rss-title {
   font-size: 16px;
   font-weight: bold;
+  text-shadow: 3px 3px 3px #EEE;
 }
 
 .rss-description {
