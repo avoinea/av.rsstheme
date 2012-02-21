@@ -259,6 +259,10 @@ div.listingBar a:hover {
   border-color: #329fd7;
 }
 
+.faceted-criteria {
+  word-break: break-word;
+}
+
 .faceted-criteria-reset {
  float: right;
  padding-top: 1em;
