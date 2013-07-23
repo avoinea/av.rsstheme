@@ -19,20 +19,20 @@
       text python:context.CookedBody(stx_level=2);
       len_text python:len(text.strip())">
 
-<div itemscope itemtype="http://schema.org/NewsArticle">
+<div>
   <div class="newsImageContainer"
     tal:condition="context/getImage|nothing">
-    <img tal:replace="structure python: context.tag(scale='preview', css_class='newsImage', itemprop='image')" />
+    <img tal:replace="structure python: context.tag(scale='preview', css_class='newsImage')" />
   </div>
 
-  <h1 itemprop="name" class="documentFirstHeading" tal:content="context/Title">
+  <h1 class="documentFirstHeading" tal:content="context/Title">
     Generic KSS Title. Is rendered with class="documentFirstHeading".
   </h1>
   <div style="float: right; margin-right: -50px; padding: 1em;">
     <div class="g-plusone"></div>
   </div>
   <div class="documentByLine">
-    <span itemprop="datePublished"
+    <span 
       tal:attributes="content context/getEffectiveDate"
       class="ro-date" tal:content="context/getEffectiveDate" />
   </div>
@@ -46,7 +46,7 @@
     tal:condition="text"
     tal:attributes="class python:test(context.Format() in ('text/structured',
       'text/x-rst', ), 'rss-description stx' + kss_class, 'rss-description plain' + kss_class)"
-    itemprop="articleBody">
+    >
     <div metal:define-slot="inside" tal:replace="structure text">The body</div>
   </div>
 
@@ -75,7 +75,7 @@
 
   <div class="newsExternal">
     <a tal:attributes="href context/getUrl; title context/title_or_id"
-     target="_blank" itemprop="publishingPrinciples">Citeşte articolul complet</a>
+     target="_blank" >Citeşte articolul complet</a>
   </div>
 
   <div id="fb-root"></div>

@@ -18,31 +18,31 @@
 
         <div class="rss-results">
           <tal:entry repeat="brain folderContents">
-          <div itemscope itemtype="http://schema.org/NewsArticle"
+          <div
             tal:define="
             odd repeat/brain/odd;
             klass string:rss-results-box;
             klass python:klass + ' ' + ('rss-results-box-right' if odd else 'rss-results-box-left')"
             tal:attributes="class klass">
             <div class="rss-title">
-              <a itemprop="name"
+              <a
                 tal:attributes="
                 href brain/getURL;
                 title brain/Title;"
                 tal:content="brain/Title" />
             </div>
             <div class="documentByLine">
-              <a itemprop="author" tal:attributes="
+              <a tal:attributes="
                 href python:'/'.join(brain.sourcePath);
                 title brain/sourceTitle;"
                 tal:content="brain/sourceTitle" />
               <span tal:content="string: - " />
-              <span itemprop="datePublished" class="ro-date"
+              <span class="ro-date"
                 tal:attributes="content python:brain.EffectiveDate"
                 tal:content="python:brain.EffectiveDate" />
             </div>
             <div class="rss-description">
-              <img itemprop="image"
+              <img
                 tal:define="
                 self nocall:context/@@faceted-rss.view;
                 thumb python:self.thumb(brain)"
@@ -51,9 +51,9 @@
                 title brain/Title;
                 src thumb;"
                 tal:condition="thumb" />
-              <span itemprop="description" tal:content="brain/Description" />
+              <span tal:content="brain/Description" />
             </div>
-            <a class="details" itemprop="url" tal:attributes="
+            <a class="details" tal:attributes="
               href brain/getURL;
               title brain/Title" i18n:translate="">Citeşte articol</a>
           </div>
