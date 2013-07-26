@@ -1,32 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rules
-    xmlns="http://namespaces.plone.org/diazo"
-    xmlns:css="http://namespaces.plone.org/diazo/css"
-    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  xmlns="http://namespaces.plone.org/diazo"
+  xmlns:css="http://namespaces.plone.org/diazo/css"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-    <rules css:if-content="#visual-portal-wrapper">
-        <theme href="stiam.html" />
+  <rules css:if-content="#visual-portal-wrapper">
+    <theme href="stiam.html" />
 
-        <drop theme="/html/head/meta" />
-        <drop theme="/html/head/title" />
+  <drop theme="/html/head/meta" />
+  <drop theme="/html/head/title" />
 
-        <after content="/html/head/title" theme-children="/html/head" />
-        <after content="/html/head/meta" theme-children="/html/head" />
-        <after content="/html/head/base | /html/head/style | /html/head/script | /html/head/link | /html/head/comment()"
-            theme-children="/html/head" />
+  <after content="/html/head/title" theme-children="/html/head" />
+  <after content="/html/head/meta" theme-children="/html/head" />
+  <after content="/html/head/base | /html/head/style | /html/head/script | /html/head/link | /html/head/comment()"
+    theme-children="/html/head" />
 
-        <copy attributes="class id dir" content="/html/body" theme="/html/body" />
+  <copy attributes="class id dir" content="/html/body" theme="/html/body" />
 
-        <replace css:theme-children="#nav" css:content-children="#portal-globalnav" />
+  <replace css:theme-children="#nav" css:content-children="#portal-globalnav" />
 
-        <copy attributes="href" css:theme="#portal-logo" css:content="#portal-logo" />
+  <copy attributes="href" css:theme="#portal-logo" css:content="#portal-logo" />
 
-        <replace css:theme-children="#side_bar" css:content-children="#portal-column-two" />
+  <!--<replace css:theme-children="#side_bar" css:content-children="#portal-column-two" />-->
 
-        <drop css:content="#portal-breadcrumbs" />
+  <drop css:content="#portal-breadcrumbs" />
+  <drop css:content=".documentFirstHeading" />
+  <drop css:theme=".hero" />
+  <drop css:theme=".clip" />
+  <drop css:theme=".action" />
+  <drop css:theme=".platforms" />
+  <drop css:theme=".separator" />
 
-        <replace css:theme-children="#content" css:content-children="#portal-column-content"/>
+  <replace css:theme-children=".content" css:content-children="#portal-column-content"/>
+  <replace css:theme-children="#title h1" css:content-children=".documentFirstHeading"/>
 
-    </rules>
+  </rules>
 
 </rules>
