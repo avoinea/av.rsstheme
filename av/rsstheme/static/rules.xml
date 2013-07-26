@@ -4,24 +4,29 @@
     xmlns:css="http://namespaces.plone.org/diazo/css"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-    <!-- The default theme, used for standard Plone web pages -->
-    <theme href="index.html" css:if-content="#visual-portal-wrapper" />
+    <rules css:if-content="#visual-portal-wrapper">
+        <theme href="stiam.html" />
 
-    <drop theme="/html/head/meta" />
-    <drop theme="/html/head/title" />
-    <drop theme="/html/head/link" />
+        <drop theme="/html/head/meta" />
+        <drop theme="/html/head/title" />
 
-    <after content="/html/head/title" theme-children="/html/head" />
-    <after content="/html/head/meta" theme-children="/html/head" />
-    <after content="/html/head/base | /html/head/style | /html/head/script | /html/head/link | /html/head/comment()"
-        theme-children="/html/head" />
+        <after content="/html/head/title" theme-children="/html/head" />
+        <after content="/html/head/meta" theme-children="/html/head" />
+        <after content="/html/head/base | /html/head/style | /html/head/script | /html/head/link | /html/head/comment()"
+            theme-children="/html/head" />
 
-    <copy attributes="class id dir" content="/html/body" theme="/html/body" />
-    <replace css:content="#portal-logo" css:theme-children="#logo" />
-    <replace css:content="#portal-globalnav" css:theme-children="#menu" />
-    <after css:content="#portal-column-one" css:theme="#sidebar" />
-    <replace css:content="#portal-column-content" css:theme="#content" />
-    <replace css:content="#portal-column-two" css:theme="#sidebar" />
-    <replace css:content="#av-footer" css:theme-children="#footer" />
+        <copy attributes="class id dir" content="/html/body" theme="/html/body" />
+
+        <replace css:theme-children="#nav" css:content-children="#portal-globalnav" />
+
+        <copy attributes="href" css:theme="#portal-logo" css:content="#portal-logo" />
+
+        <replace css:theme-children="#side_bar" css:content-children="#portal-column-two" />
+
+        <drop css:content="#portal-breadcrumbs" />
+
+        <replace css:theme-children="#content" css:content-children="#portal-column-content"/>
+
+    </rules>
 
 </rules>
