@@ -1,42 +1,10 @@
 /* Stylesheet for the 'AV RSS Theme' Plone theme */
-
-#header {
-  margin-bottom: 0em;
-  background: none;
-  border-bottom: 1px solid #777C1F;
-}
-
-#page {
-  width: auto;
-  max-width: 1500px;
-  min-width: 480px;
-  margin: auto;
-}
-
-#header {
-  width: auto;
-  max-width: 1500px;
-  min-width: 480px;
-  height: 82px;
-  margin: auto;
-}
-
-body {
-  margin-top: 30px;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #ffffff url(/++resource++av.rsstheme.images/top.png) repeat-x;
-}
-
 legend {
   display: inline;
 }
 
 a {
   text-decoration: none;
-}
-
-.documentDescription {
-  display: none;
 }
 
 .documentByLine {
@@ -51,10 +19,6 @@ a {
 
 .documentByLine a:hover {
   color: #777C1F;
-}
-
-a:visited {
-  color: #7BAA0F;
 }
 
 body.template-facetednavigation_view .documentFirstHeading {
@@ -121,16 +85,6 @@ body.template-facetednavigation_view .documentFirstHeading {
 
 #content-core {
   padding: 0.5em;
-}
-
-#portal-globalnav a {
-  text-transform:lowercase;
-}
-
-#footer {
-  min-height: 250px;
-  padding: 0px;
-  background: #777C1F url(++resource++av.rsstheme.images/bottom.png) repeat-x;
 }
 
 /* Faceted navigation */
@@ -432,41 +386,7 @@ div.listingBar a:hover {
   font-size: 18px;
 }
 
-#portal-breadcrumbs a, a:visited {
-  color: 7BAA0F;
-}
-
 #viewlet-above-content {
   border-bottom: 1px solid #777C1F;
 }
 
-#av-footer {
-  background-color: #777C1F;
-  float: left;
-  margin: 7em 0 0;
-  padding: 0 7em;
-}
-
-.av-footer-servers {
-  float: left;
-}
-
-.av-footer-categories {
-  width: 39%;
-  float: right;
-}
-
-#av-footer dt a {
-  font-size: 20px;
-}
-
-#av-footer dd {
-  width: 120px;
-  float: left;
-}
-
-#av-footer a {
-  color: white;
-  text-shadow: 1px 1px 1px #555;
-  font-size: 16px;
-}

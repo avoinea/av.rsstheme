@@ -25,11 +25,14 @@
 
   <drop css:content="#portal-breadcrumbs" />
   <drop css:content=".documentFirstHeading" />
+  <drop css:content="#category" />
+
   <drop css:theme=".hero" />
   <drop css:theme=".clip" />
   <drop css:theme=".action" />
   <drop css:theme=".platforms" />
   <drop css:theme=".separator" />
+
 
   <replace css:theme-children=".content" css:content-children="#portal-column-content"/>
   <replace css:theme-children="#title h1" css:content-children=".documentFirstHeading"/>
