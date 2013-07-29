@@ -125,14 +125,9 @@ body.template-facetednavigation_view .documentFirstHeading {
 }
 
 .rss-results-box {
-  max-width: 250px;
-  float: left;
   margin: 1em;
-  height: 250px;
-  box-shadow: 5px 5px 5px #ccc;
   padding: 1em;
-  border: 1px solid #CCC;
-  border-radius: 10px;
+  border: 1px solid #eee;
   position: relative;
   overflow: hidden;
 }

@@ -17,7 +17,7 @@
 
   <copy attributes="class id dir" content="/html/body" theme="/html/body" />
 
-  <replace css:theme-children="#nav" css:content-children="#portal-globalnav" />
+  <!--<replace css:theme-children="#nav" css:content-children="#portal-globalnav" />-->
 
   <copy attributes="href" css:theme="#portal-logo" css:content="#portal-logo" />
 
