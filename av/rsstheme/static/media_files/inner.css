@@ -2,7 +2,7 @@
 
 .inner .top { height: auto; position:relative; z-index: 5555; }
 
-#title { -moz-border-radius: 12px 12px 0 0; -webkit-border-radius: 12px 12px 0 0; border-radius: 12px 12px 0 0; background: #eeeeee; 
+#title { -moz-border-radius: 12px 12px 0 0; -webkit-border-radius: 12px 12px 0 0; border-radius: 12px 12px 0 0; background: #eeeeee;
 background: -moz-linear-gradient(top, #FBFBFB 0%, #E1E1E1 100%); /* firefox */
 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FBFBFB), color-stop(100%,#E1E1E1)); /* webkit */
 background: linear-gradient(#FBFBFB, #E1E1E1);
@@ -14,7 +14,7 @@ background: linear-gradient(#FBFBFB, #E1E1E1);
 #language ul { list-style-type: none; display: table; }
 #language li { float: left; padding: 3px 7px 4px 7px; margin-right: 2px; line-height: 1em;}
 #language li.active { background: #d4d4d4; border-radius: 3px; -moz-border-radius: 3px; box-shadow: 0px 1px 0px #fff; -moz-box-shadow: 0px 1px 0px #fff; -webkit-box-shadow: 0px 1px 0px #fff;}
- 
+
 .inner #main .content { /* padding-top: 26px; */ }
 .inner #main .body { border-right: none; padding-top: 62px; }
 .inner #main .body h2 { font-size: 2.1em; margin-bottom: 12px; /* padding-top: 15px; */ color: #5b5f62; }
@@ -40,7 +40,7 @@ float: left;
 .post-share{
 float: right !important;
 padding-top:4px;
-} 
+}
 .share-facebook{
 float: right !important;
 }
@@ -56,7 +56,7 @@ clear:both;
 #main .body ul.gallery li:before {content:''!important;}
 #main .body ul.gallery li a { display: block; text-align: center; cursor: pointer; margin: auto; text-decoration: none; font-size: 1.000em; color: #536172; }
 #main .body ul.gallery li a:hover span{text-decoration: underline; }
-#main .body ul.gallery li a i { margin: 0; display: inline-block; background: url(http://whatsappcdn.appspot.com/img/v2/phones/smallphones.png?2) no-repeat; height: 150px; width: 87px; }
+#main .body ul.gallery li a i { margin: 0; display: inline-block; background: url(smallphones.png) no-repeat; height: 150px; width: 87px; }
 #main .body ul.gallery li a.iphone i {}
 #main .body ul.gallery li a.android i { background-position: -137px 0;}
 #main .body ul.gallery li a.blackberry i { background-position: -272px 0;}
@@ -111,8 +111,8 @@ clear:both;
 
 #search-results a {
 	text-decoration: none!important;
-	padding-bottom: 10px;	
-} 
+	padding-bottom: 10px;
+}
 
 #results-scroller {
 	position: relative;
@@ -120,7 +120,7 @@ clear:both;
 
 #search-results .list {
 	height: 300px;
-	
+
 }
 
 #results-scroller .hider {
@@ -179,7 +179,7 @@ clear:both;
 }
 
 #search-results .list li h3, #search-results  .list li div {
-	margin-left: 42px;	
+	margin-left: 42px;
 }
 
 #search-results .platform-icon {
@@ -343,7 +343,7 @@ clear:both;
 
 /* ------ ENCODED GRAPHICS ----- */
 .faq-entry nav a .arr {
-background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAABACAMAAABMUIWcAAABHVBMVEXe3t7i4uL////i4uLe3t7e3t7i4uLe3t7i4uLe3t7e3t7i4uLe3t7i4uLe3t7i4uLi4uLi4uLi4uLe3t7i4uLe3t7i4uLe3t7i4uLe3t7i4uLe3t7i4uLe3t7i4uLe3t7i4uLi4uLe3t7i4uLe3t7i4uLe3t7e3t7i4uLi4uLi4uLi4uLi4uLi4uLi4uLe3t7e3t7i4uLe3t7i4uLe3t7i4uLi4uLi4uLi4uLe3t7i4uLi4uLi4uLe3t7i4uLi4uLe3t7i4uLe3t7i4uLe3t7i4uLi4uLi4uLi4uLe3t7i4uLe3t7e3t7e3t7i4uLi4uLi4uLi4uLe3t7e3t7i4uLi4uLe3t7i4uLe3t7i4uLe3t7i4uLe3t7i4uLe3t6GBBQWAAAAXnRSTlMAAAACBggIDAwOEhIUFBgYGh4gJCQsLDAwMjI2Njg8Pj5CSEhKSk5UVlpcYGJmaGxucnR0eHh6foGFhYeNl5eZnZ2fn6Ojtbe9wcHDx8nJz9PV2+Hh6+3x8/P3+f39lKc8pwAAAkhJREFUSMeFlOt60kAQQJcJVhTpRQURY6XFS9uEKGpBKQYjFlpaoRVijZR9/8dws8nekk06P/hC5mSzmZ05qCBH3Wy3zTrIgUS2NfLns+FwNvdHbzSANZtYlehexRrPrARgjqamvLA5HZkyYAUWJILdosChb0IqTP+QAY3VLmhid9WIAc8GbdheBDhjyIixEwLGuhaCiaBAbW0Q4OgUJODzAwmA0yMCnO0J4N5PrAB7Z4BKgcGBzV9YBYyghJpTYMCLBU4AMG0i+i0UePcPs7hggGej45MY+IpxGjg5FoC0gAD6XeS47BXVRRpwHdSa8E1uXqY2OWmhis8BVPyRBPwKKszrUiU/3ipAfU4q2RnIpd6/LwODDgFKwXbWYW0HpfC4u27Wcbtd2g/GuqnPN8lp04468J/q8o/9A9a0neutdH7r+pNo+96ykcw3lj15cOzVoCyny4OVrY7eRv+mX2Pp2peb/kZqeMvdq6U3dJyht7zqVXTTXSjs2G3Xbds7yvgrO9P5QVxm+IFPc5Yf4lHO9oMiA50fwp9cP4RVzfUDnY48PwDc4QeI/KDtOeoHiPzAgJf7clOGfoDIDwx4ffteAiQ/cADj70UOSH4gwPMwPpDpO3/EB0P4gQBiuBdVBgg/KAD++xYl/aACv6so6QcFOH/IXiH8IH0F/lbkmxR+EEBcCO4HiPzAgT+vpEKFfoDIDwx49kQudegHiPygPSzqB4A7/EAKnu8HcpHvh/Ay1w/0T54f4v7M9kN8J9sP4qEMP8gL6/zwH8pvhbNNpmbBAAAAAElFTkSuQmCC') top left no-repeat; 
+background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAABACAMAAABMUIWcAAABHVBMVEXe3t7i4uL////i4uLe3t7e3t7i4uLe3t7i4uLe3t7e3t7i4uLe3t7i4uLe3t7i4uLi4uLi4uLi4uLe3t7i4uLe3t7i4uLe3t7i4uLe3t7i4uLe3t7i4uLe3t7i4uLe3t7i4uLi4uLe3t7i4uLe3t7i4uLe3t7e3t7i4uLi4uLi4uLi4uLi4uLi4uLi4uLe3t7e3t7i4uLe3t7i4uLe3t7i4uLi4uLi4uLi4uLe3t7i4uLi4uLi4uLe3t7i4uLi4uLe3t7i4uLe3t7i4uLe3t7i4uLi4uLi4uLi4uLe3t7i4uLe3t7e3t7e3t7i4uLi4uLi4uLi4uLe3t7e3t7i4uLi4uLe3t7i4uLe3t7i4uLe3t7i4uLe3t7i4uLe3t6GBBQWAAAAXnRSTlMAAAACBggIDAwOEhIUFBgYGh4gJCQsLDAwMjI2Njg8Pj5CSEhKSk5UVlpcYGJmaGxucnR0eHh6foGFhYeNl5eZnZ2fn6Ojtbe9wcHDx8nJz9PV2+Hh6+3x8/P3+f39lKc8pwAAAkhJREFUSMeFlOt60kAQQJcJVhTpRQURY6XFS9uEKGpBKQYjFlpaoRVijZR9/8dws8nekk06P/hC5mSzmZ05qCBH3Wy3zTrIgUS2NfLns+FwNvdHbzSANZtYlehexRrPrARgjqamvLA5HZkyYAUWJILdosChb0IqTP+QAY3VLmhid9WIAc8GbdheBDhjyIixEwLGuhaCiaBAbW0Q4OgUJODzAwmA0yMCnO0J4N5PrAB7Z4BKgcGBzV9YBYyghJpTYMCLBU4AMG0i+i0UePcPs7hggGej45MY+IpxGjg5FoC0gAD6XeS47BXVRRpwHdSa8E1uXqY2OWmhis8BVPyRBPwKKszrUiU/3ipAfU4q2RnIpd6/LwODDgFKwXbWYW0HpfC4u27Wcbtd2g/GuqnPN8lp04468J/q8o/9A9a0neutdH7r+pNo+96ykcw3lj15cOzVoCyny4OVrY7eRv+mX2Pp2peb/kZqeMvdq6U3dJyht7zqVXTTXSjs2G3Xbds7yvgrO9P5QVxm+IFPc5Yf4lHO9oMiA50fwp9cP4RVzfUDnY48PwDc4QeI/KDtOeoHiPzAgJf7clOGfoDIDwx4ffteAiQ/cADj70UOSH4gwPMwPpDpO3/EB0P4gQBiuBdVBgg/KAD++xYl/aACv6so6QcFOH/IXiH8IH0F/lbkmxR+EEBcCO4HiPzAgT+vpEKFfoDIDwx49kQudegHiPygPSzqB4A7/EAKnu8HcpHvh/Ay1w/0T54f4v7M9kN8J9sP4qEMP8gL6/zwH8pvhbNNpmbBAAAAAElFTkSuQmCC') top left no-repeat;
 }
 
 
