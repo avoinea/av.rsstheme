@@ -25,6 +25,7 @@
 
   <drop css:content="#portal-breadcrumbs" />
   <drop css:content=".documentFirstHeading" />
+  <drop css:content=".documentDescription" />
   <drop css:content="#category" />
 
   <drop css:theme=".hero" />
