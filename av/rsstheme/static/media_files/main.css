@@ -30,14 +30,14 @@
 		border-radius: 20px; -moz-border-radius: 20px; -webkit-border-radius: 20px; -khtml-border-radius: 20px;
 		padding: 0 2.632em 0 1.632em;
 		background: #60b82d;
-		background: -moz-linear-gradient(top, #F8B37A 0%, #F58C1A 100%);
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F8B37A), color-stop(100%,#F58C1A));
-		background: linear-gradient(#F8B37A, #F58C1A);
-		-pie-background: linear-gradient(#F8B37A, #F58C1A);
+		background: -moz-linear-gradient(top, #69ca3b 0%, #56a61e 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#69ca3b), color-stop(100%,#56a61e));
+		background: linear-gradient(#69ca3b, #56a61e);
+		-pie-background: linear-gradient(#69ca3b, #56a61e);
 		text-shadow: 0 -1px 0px rgba(0,0,0,0.15);
-		box-shadow: inset 0px 1px 0px #F58C1A;
-		-moz-box-shadow: inset 0px 1px 0px #F58C1A;
-		-webkit-box-shadow: inset 0px 1px 0px #F58C1A;
+		box-shadow: inset 0px 1px 0px #56a61e;
+		-moz-box-shadow: inset 0px 1px 0px #56a61e;
+		-webkit-box-shadow: inset 0px 1px 0px #56a61e;
 		position: relative;
 		outline: none;
 		font-size: 1.388em;
@@ -53,18 +53,18 @@
 		box-shadow: inset 0px 1px 6px #FFF;
 		-moz-box-shadow: inset 0px 1px 6px #FFF;
 		-webkit-box-shadow: inset 0px 1px 6px #FFF;
-		background-image: linear-gradient(bottom, #F58C1A 0%, #F8B37A 100%);
-		background-image: -o-linear-gradient(bottom, #F58C1A 0%, #F8B37A 100%);
-		background-image: -moz-linear-gradient(bottom, #F58C1A 0%, #F8B37A 100%);
-		background-image: -webkit-linear-gradient(bottom, #F58C1A 0%, #F8B37A 100%);
-		background-image: -ms-linear-gradient(bottom, #F58C1A 0%, #F8B37A 100%);
+		background-image: linear-gradient(bottom, #56a61e 0%, #69ca3b 100%);
+		background-image: -o-linear-gradient(bottom, #56a61e 0%, #69ca3b 100%);
+		background-image: -moz-linear-gradient(bottom, #56a61e 0%, #69ca3b 100%);
+		background-image: -webkit-linear-gradient(bottom, #56a61e 0%, #69ca3b 100%);
+		background-image: -ms-linear-gradient(bottom, #56a61e 0%, #69ca3b 100%);
 
 		background-image: -webkit-gradient(
 			linear,
 			left bottom,
 			left top,
-			color-stop(0, #F58C1A),
-			color-stop(1, #F8B37A)
+			color-stop(0, #56a61e),
+			color-stop(1, #69ca3b)
 		);
 	}
 
@@ -105,7 +105,7 @@
 	#teaser header h2 a.button {
 		padding: 0 1.632em 0 1.632em;
 		font-size: 0.792em;
-		-pie-background: linear-gradient(#F8B37A, #F58C1A);
+		-pie-background: linear-gradient(#69ca3b, #56a61e);
 		behavior: url('/css/PIE.htc');
 	}
 
@@ -143,7 +143,7 @@
 
 
 	#main { background: #fff; -moz-border-radius: 0 0 12px 12px; -webkit-border-radius: 0 0 12px 12px; border-radius: 0 0 12px 12px; box-shadow: 0px 1px 3px #191a1e; -moz-box-shadow: 0px 1px 3px #191a1e; -webkit-box-shadow: 0px 1px 3px #191a1e; width: 981px; margin: 0 auto; behavior: url(/css/PIE.php); }
-	#main .separator { background-color: #F58C1A; height: 8px; width: 100%; border-top: 1px solid #F58C1A; }
+	#main .separator { background-color: #56a61e; height: 8px; width: 100%; border-top: 1px solid #56a61e; }
 	#main .content { display: table; padding-top: 0; }
 	#main .body { display: table-cell; vertical-align: top; width: 638px; border-right: none; padding: 54px 40px 48px 0px; color: #32373b; }
 /* padding: 54px 40px 48px 35px;	 */
