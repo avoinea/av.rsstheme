@@ -4,13 +4,6 @@
   xmlns:faceted="http://namespaces.zope.org/faceted"
   i18n_domain="av.rsstheme">
 
-  <browser:viewlet
-    name="av.footer"
-    class=".app.viewlets.FooterViewlet"
-    manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
-    permission="zope2.View"
-    />
-
   <interface
     interface=".interfaces.IThemeSpecific"
     type="zope.publisher.interfaces.browser.IBrowserSkinType"
