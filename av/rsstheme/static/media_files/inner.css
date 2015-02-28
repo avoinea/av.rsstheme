@@ -6,7 +6,7 @@
 background: -moz-linear-gradient(top, #FBFBFB 0%, #E1E1E1 100%); /* firefox */
 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FBFBFB), color-stop(100%,#E1E1E1)); /* webkit */
 background: linear-gradient(#FBFBFB, #E1E1E1);
- /* ie */ display: table; width: 981px;  position: relative; behavior: url(/css/PIE.php);}
+ /* ie */ display: table; max-width: 981px;  position: relative; behavior: url(/css/PIE.php);}
 #title h1 { font-weight: normal; color: #31424c; font-size: 1.75em; text-shadow: 0 1px 0 #fff; padding: 28px 22px 27px 42px; width: 649px; display: table-cell; vertical-align: top; }
 #title h1 a { color:#31424c; }
 #language { display: table-cell; font-size: 0.625em; vertical-align: middle; }

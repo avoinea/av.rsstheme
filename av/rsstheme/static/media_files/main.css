@@ -6,20 +6,20 @@
 	body { font-size:100%; background: #393e43; margin: 0; padding: 0; font-family: "Helvetica Neue", Helvetica, /*Tahoma,*/ Arial, sans-serif; line-height: 1.51em;   }
 	body.inner { overflow: -moz-scrollbars-vertical; overflow-y: scroll; }
 
-	.top { background-color: #666; overflow-y: hidden; height: 603px; min-width: 981px; }
+	.top { background-color: #393e43; overflow-y: hidden; height: 603px; max-width: 981px; margin: 0 auto;}
 
 	.clip { overflow: hidden; }
 
 	.top.on { height:715px; }
 	.top a { color: #fdfdfd; text-decoration: none; }
-	.wrapper { width: 981px; margin: 0 auto;  }
-	header.main { display: table; padding: 21px 0px 5px 0px; }
-	#logo { display: table-cell; vertical-align: top; padding-left: 26px; }
+	.wrapper { width: 100%; margin: 0 auto; overflow: hidden; }
+	header.main { display: block; padding: 21px 0px 5px 0px; }
+	#logo { display: table-cell; vertical-align: top; float: left;}
 	#logo a.logo { text-indent: -5000px; width: 230px; height: 61px; background: url('logo.png') top left no-repeat; display: block; }
-	.main nav { float: right; display: table-cell; font-size: 1.125em; vertical-align: middle; padding-right: 34px; }
+	.main nav { float: right; display: table-cell; font-size: 1.125em; vertical-align: middle; padding-right: 0.5em; }
 
 	.main nav ul { margin-top: 17px; }
-	.main nav li { list-style-type: none; float: left; padding-right: 49px; background: /* url('http://whatsappcdn.appspot.com/img/v2/bg-menu.png') */ no-repeat; background-position: center right; }
+	.main nav li { list-style-type: none; float: left; padding-right: 1em; background: /* url('http://whatsappcdn.appspot.com/img/v2/bg-menu.png') */ no-repeat; background-position: center right; }
 	.main nav ul li:last-child { padding-right: 0; }
 	.main nav a { text-shadow: 0 0 2px #000; -moz-text-shadow: 0 0 2px #000; -webkit-text-shadow: 0 0 2px #000; font-weight: bolder; display: inline-block; padding: 4px 0 6px 0; }
 	.main nav a:hover { display: inline-block; padding: 4px 16px 6px 16px; background: rgba(0,0,0,0.08); margin: 0px -16px 0 -16px ; box-shadow: 0px -1px 0 #131217; -moz-box-shadow: 0px -1px 0 #131217; color: #eeeeee; border-radius: 20px; -moz-border-radius: 20px; -webkit-border-radius: 20px;}
@@ -138,13 +138,13 @@
 	#teaser .versions .v4 .screenshot { top: 81px; left: 44px; }
 
 
-	.bottom { padding-bottom: 28px; background: top left repeat-x; min-width: 981px; font-size: 0.875em; }
+	.bottom { padding-bottom: 28px; background: top left repeat-x; max-width: 981px; margin: 0 auto; font-size: 0.875em; }
 	.bottom.off { background:none; }
 
 
-	#main { background: #fff; -moz-border-radius: 0 0 12px 12px; -webkit-border-radius: 0 0 12px 12px; border-radius: 0 0 12px 12px; box-shadow: 0px 1px 3px #191a1e; -moz-box-shadow: 0px 1px 3px #191a1e; -webkit-box-shadow: 0px 1px 3px #191a1e; width: 981px; margin: 0 auto; behavior: url(/css/PIE.php); }
+	#main { background: #fff; -moz-border-radius: 0 0 12px 12px; -webkit-border-radius: 0 0 12px 12px; border-radius: 0 0 12px 12px; box-shadow: 0px 1px 3px #191a1e; -moz-box-shadow: 0px 1px 3px #191a1e; -webkit-box-shadow: 0px 1px 3px #191a1e; max-width: 981px; margin: 0 auto; behavior: url(/css/PIE.php); }
 	#main .separator { background-color: #56a61e; height: 8px; width: 100%; border-top: 1px solid #56a61e; }
-	#main .content { display: table; padding-top: 0; }
+	#main .content { display: block; padding-top: 0; }
 	#main .body { display: table-cell; vertical-align: top; width: 638px; border-right: none; padding: 54px 40px 48px 0px; color: #32373b; }
 /* padding: 54px 40px 48px 35px;	 */
 	#main .body.download { width: 968px;}
